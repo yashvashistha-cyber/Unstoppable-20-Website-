@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate — Unstoppable 20</title>
+    <meta name="description" content="Support Unstoppable 20 NGO. Your donation helps educate underprivileged children in Jaipur, Rajasthan.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="donate.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header" id="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-container">
+                <img src="assets/logo.png" alt="Unstoppable 20 Logo" class="ngo-logo">
+                <span class="logo-text" style="font-size:1rem;font-weight:800;white-space:nowrap;">
+                    <span style="color:var(--color-orange);">UNSTOPPABLE - 20</span>
+                    <span style="color:var(--color-blue);"> FOUNDATION</span>
+                </span>
+            </a>
+            <nav class="navbar" id="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="index.html#programs" class="nav-link">Programs</a></li>
+                    <li><a href="index.html#events" class="nav-link">Events</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                    <li><a href="donate.html" class="nav-link active">Donate</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle Navigation">
+                    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Banner -->
+        <section class="donate-hero">
+            <div class="container donate-hero-content">
+                <span class="section-subtitle"><i class="fa-solid fa-heart"></i> Make a Difference</span>
+                <h1>Support Our Mission</h1>
+                <p>Every rupee you donate goes directly towards educating underprivileged children on the streets of Jaipur. Your generosity funds books, meals, digital tools, and hope — helping us turn roadside spots into centers of learning.</p>
+                <div class="donate-hero-stats">
+                    <div class="dhero-stat"><span>500+</span><small>Children Supported</small></div>
+                    <div class="dhero-stat"><span>70+</span><small>Volunteers</small></div>
+                    <div class="dhero-stat"><span>5+</span><small>Years of Service</small></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Payment Section -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-header text-center scroll-reveal">
+                    <span class="section-subtitle">Choose Your Method</span>
+                    <h2 class="section-title">How to Donate</h2>
+                    <div class="heading-underline"></div>
+                    <p class="section-desc">You can donate instantly via UPI or directly to our bank account. After payment, please fill the confirmation form below.</p>
+                </div>
+
+                <div class="donate-payment-grid">
+                    <!-- UPI Card -->
+                    <div class="donate-card scroll-reveal fade-left">
+                        <div class="donate-card-header bg-blue">
+                            <i class="fa-solid fa-qrcode"></i>
+                            <h3>Scan & Pay via UPI</h3>
+                        </div>
+                        <div class="donate-card-body">
+                            <div class="qr-wrapper">
+                                <img src="assets/upi_qr.jpeg" alt="UPI QR Code" class="qr-image">
+                                <div class="qr-shine"></div>
+                            </div>
+                            <div class="upi-id-box">
+                                <span class="upi-label"><i class="fa-solid fa-mobile-screen"></i> UPI ID</span>
+                                <span class="upi-value" id="upi-id-text">prakashrahul37@ybl</span>
+                                <button class="copy-btn" onclick="copyUPI()" title="Copy UPI ID">
+                                    <i class="fa-solid fa-copy"></i>
+                                </button>
+                            </div>
+                            <p class="upi-note"><i class="fa-solid fa-circle-info"></i> Works with PhonePe, Google Pay, Paytm, BHIM & all UPI apps</p>
+                        </div>
+                    </div>
+
+                    <!-- Bank Details Card -->
+                    <div class="donate-card scroll-reveal fade-right">
+                        <div class="donate-card-header bg-orange">
+                            <i class="fa-solid fa-building-columns"></i>
+                            <h3>Bank Transfer</h3>
+                        </div>
+                        <div class="donate-card-body">
+                            <div class="bank-details">
+                                <div class="bank-row">
+                                    <span class="bank-label"><i class="fa-solid fa-user"></i> Account Holder</span>
+                                    <span class="bank-value">UNSTOPPABLE-20</span>
+                                </div>
+                                <div class="bank-row">
+                                    <span class="bank-label"><i class="fa-solid fa-landmark"></i> Bank Name</span>
+                                    <span class="bank-value">Kotak Mahindra Bank</span>
+                                </div>
+                                <div class="bank-row">
+                                    <span class="bank-label"><i class="fa-solid fa-hashtag"></i> Account Number</span>
+                                    <span class="bank-value">8450504512</span>
+                                </div>
+                                <div class="bank-row">
+                                    <span class="bank-label"><i class="fa-solid fa-code"></i> IFSC Code</span>
+                                    <span class="bank-value">KKBK0003580</span>
+                                </div>
+                                <div class="bank-row">
+                                    <span class="bank-label"><i class="fa-solid fa-location-dot"></i> Account Type</span>
+                                    <span class="bank-value">Current Account</span>
+                                </div>
+                            </div>
+                            <p class="upi-note"><i class="fa-solid fa-circle-info"></i> Please use your name as the transfer reference and fill the confirmation form below.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Donation Tiers -->
+        <section class="section-padding bg-light">
+            <div class="container">
+                <div class="section-header text-center scroll-reveal">
+                    <span class="section-subtitle">Every Amount Matters</span>
+                    <h2 class="section-title">Choose Your Impact</h2>
+                    <div class="heading-underline"></div>
+                </div>
+                <div class="impact-tiers scroll-reveal fade-up">
+                    <div class="impact-tier">
+                        <div class="tier-icon" style="background:var(--color-blue-light);color:var(--color-blue)"><i class="fa-solid fa-book"></i></div>
+                        <span class="tier-amt">₹500</span>
+                        <p>Sponsor a teaching kit for 1 child</p>
+                    </div>
+                    <div class="impact-tier">
+                        <div class="tier-icon" style="background:var(--color-orange-light);color:var(--color-orange)"><i class="fa-solid fa-pencil"></i></div>
+                        <span class="tier-amt">₹1,000</span>
+                        <p>Provide books & stationery for 3 kids</p>
+                    </div>
+                    <div class="impact-tier popular">
+                        <div class="popular-badge">Most Popular</div>
+                        <div class="tier-icon" style="background:var(--color-green-light);color:var(--color-green)"><i class="fa-solid fa-utensils"></i></div>
+                        <span class="tier-amt">₹2,500</span>
+                        <p>Sponsor nutrition meals for 5 kids for a month</p>
+                    </div>
+                    <div class="impact-tier">
+                        <div class="tier-icon" style="background:#fefbeb;color:#f59e0b"><i class="fa-solid fa-laptop"></i></div>
+                        <span class="tier-amt">₹5,000</span>
+                        <p>Fund a digital literacy desktop slot</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Confirmation Form -->
+        <section class="section-padding" id="confirm">
+            <div class="container">
+                <div class="section-header text-center scroll-reveal">
+                    <span class="section-subtitle">Last Step</span>
+                    <h2 class="section-title">Donation Confirmation</h2>
+                    <div class="heading-underline"></div>
+                    <p class="section-desc">After completing your payment, please fill this form so we can verify and acknowledge your donation.</p>
+                </div>
+
+                <div class="donate-form-wrapper scroll-reveal fade-up">
+                    <form id="donation-confirm-form" class="interactive-form donate-confirm-form">
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label for="dc-name"><i class="fa-solid fa-user"></i> Full Name *</label>
+                                <input type="text" id="dc-name" required placeholder="Your full name">
+                            </div>
+                            <div class="form-group">
+                                <label for="dc-email"><i class="fa-solid fa-envelope"></i> Email Address *</label>
+                                <input type="email" id="dc-email" required placeholder="Your email address">
+                            </div>
+                        </div>
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label for="dc-phone"><i class="fa-solid fa-phone"></i> Phone Number *</label>
+                                <input type="tel" id="dc-phone" required placeholder="Your phone number">
+                            </div>
+                            <div class="form-group">
+                                <label for="dc-amount"><i class="fa-solid fa-indian-rupee-sign"></i> Donation Amount (₹) *</label>
+                                <input type="number" id="dc-amount" required placeholder="e.g. 500">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dc-txn"><i class="fa-solid fa-receipt"></i> Transaction ID / UTR Number *</label>
+                            <input type="text" id="dc-txn" required placeholder="12-digit UTR or Transaction ID">
+                        </div>
+                        <div class="form-group">
+                            <label for="dc-screenshot"><i class="fa-solid fa-image"></i> Upload Payment Screenshot</label>
+                            <input type="file" id="dc-screenshot" accept="image/*" class="file-input">
+                            <small class="file-hint">Optional — JPG, PNG (max 5MB)</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="dc-message"><i class="fa-solid fa-comment"></i> Message (Optional)</label>
+                            <textarea id="dc-message" rows="3" placeholder="Any message for the team..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block donate-submit-btn">
+                            <span class="btn-text"><i class="fa-solid fa-paper-plane"></i> Submit Confirmation</span>
+                        </button>
+                        <div id="donate-confirm-success" class="form-status success-message hide">
+                            <i class="fa-solid fa-circle-check"></i> Thank you for your generous donation! We have received your donation details. Our team will verify the payment and contact you if required.
+                        </div>
+                        <div id="donate-confirm-error" class="form-status hide" style="background:#fef2f2;color:#dc2626;border:1px solid #fca5a5;">
+                            <i class="fa-solid fa-circle-xmark"></i> Something went wrong. Please try again or contact us at u20educationmatters@gmail.com
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-grid grid-4">
+            <div class="footer-col footer-about">
+                <div class="logo-container">
+                    <img src="assets/logo.png" alt="Logo" class="ngo-logo-footer">
+                    <span class="logo-text text-white">UNSTOPPABLE <span class="accent-text">20</span></span>
+                </div>
+                <p>A registered NGO running roadside street schools to empower children across Jaipur, Rajasthan.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/share/18BYfsM82w/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/un_stoppable.20?igsh=dzJseTNnMDh1Nnhi" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://youtube.com/@unstoppable-20?si=MA019tbw1h-pO3qf" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.linkedin.com/in/ram-raika-b46223322" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="index.html#programs">Programs</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul class="footer-links">
+                    <li><i class="fa-solid fa-phone"></i> +91 90241 83219</li>
+                    <li><i class="fa-solid fa-envelope"></i> u20educationmatters@gmail.com</li>
+                    <li><i class="fa-solid fa-location-dot"></i> Sector 18, Pratap Nagar, Jaipur</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Bank Details</h4>
+                <ul class="footer-links">
+                    <li>UNSTOPPABLE-20</li>
+                    <li>Kotak Mahindra Bank</li>
+                    <li>A/C: 8450504512</li>
+                    <li>IFSC: KKBK0003580</li>
+                    <li>UPI: prakashrahul37@ybl</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-content">
+                <p>&copy; 2026 Unstoppable 20. All Rights Reserved.</p>
+                <p>Proudly serving children with education & hope.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="donate.js"></script>
+</body>
+</html>
